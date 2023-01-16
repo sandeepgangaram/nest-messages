@@ -10,4 +10,4 @@ Content-Type: application/json
 }
 
 ### Get a particular message using id
-GET http://localhost:8080/messages/382
+GET http://localhost:8080/messages/38209
