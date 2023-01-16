@@ -9,13 +9,10 @@ import {
 } from '@nestjs/common';
 import { CreateMessageDTO } from './dtos/message-create.dto';
 import { MessagesService } from './messages.service';
+
 @Controller('messages')
 export class MessagesController {
-  messagesService: MessagesService;
-
-  constructor() {
-    this.messagesService = new MessagesService();
-  }
+  constructor(private readonly messagesService: MessagesService) {}
 
   @Get()
   listMessages() {
@@ -24,7 +21,6 @@ export class MessagesController {
 
   @Post()
   createMessage(@Body() body: CreateMessageDTO) {
-    console.log(body);
     return this.messagesService.create(body.content);
   }
 

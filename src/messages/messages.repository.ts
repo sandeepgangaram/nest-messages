@@ -1,5 +1,8 @@
 /* eslint-disable prettier/prettier */
+import { Injectable } from '@nestjs/common';
 import { readFile, writeFile } from 'fs/promises';
+
+@Injectable()
 export class MessagesRepository {
   async findOne(id: string) {
     const contents = await readFile('messages.json', 'utf-8');
