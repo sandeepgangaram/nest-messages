@@ -6,8 +6,8 @@ POST http://localhost:8080/messages
 Content-Type: application/json
 
 {
-  "content":"hey there"
+  "content":"hey after DI"
 }
 
 ### Get a particular message using id
-GET http://localhost:8080/messages/38209
+GET http://localhost:8080/messages/528
